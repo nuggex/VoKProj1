@@ -32,33 +32,44 @@ public class AsteroidMove : MonoBehaviour
         float distanceA23 = var.GetDistance(asteroid2.transform.position, asteroid3.transform.position);
         float distanceA24 = var.GetDistance(asteroid2.transform.position, asteroid4.transform.position);
         float distanceA34 = var.GetDistance(asteroid3.transform.position, asteroid4.transform.position);
-        if(distanceA12 < minDistance)
+
+        if (distanceA12 <= minDistance)
         {
-          transform.Translate(var.GetVelocity( transform.position, asteroid2.transform.position, aspeed));
+          transform.Translate(var.GetVelocity(transform.position, asteroid2.transform.position, aspeed));
         }
-        if (distanceA13 < minDistance)
-        {
-            transform.Translate(var.GetVelocity(transform.position, asteroid3.transform.position, aspeed));
-        }
-        if (distanceA14 < minDistance)
-        {
-            transform.Translate(var.GetVelocity(transform.position, asteroid4.transform.position, aspeed));
-        }
-        if (distanceA23 < minDistance)
+   
+        if (distanceA13 <= minDistance)
         {
             transform.Translate(var.GetVelocity(transform.position, asteroid3.transform.position, aspeed));
         }
-        if (distanceA24 < minDistance)
+ 
+        if (distanceA14 <= minDistance)
         {
             transform.Translate(var.GetVelocity(transform.position, asteroid4.transform.position, aspeed));
         }
-        if (distanceA34 < minDistance)
+
+        if (distanceA23 <= minDistance)
+        {
+            transform.Translate(var.GetVelocity(transform.position, asteroid3.transform.position, aspeed));
+        }
+
+        if (distanceA24 <= minDistance)
         {
             transform.Translate(var.GetVelocity(transform.position, asteroid4.transform.position, aspeed));
         }
+      
+        if (distanceA34 <= minDistance)
+        {
+            transform.Translate(var.GetVelocity(transform.position, asteroid4.transform.position, aspeed));
+        }
+        
         if (distance > minDistance)
         {
             transform.Translate(var.GetVelocity(rocketShip.transform.position, transform.position, aspeed));
+        }
+        if(distance < minDistance)
+        {
+            transform.Translate(var.GetVelocity(transform.position, rocketShip.transform.position, aspeed));
         }
 
     }

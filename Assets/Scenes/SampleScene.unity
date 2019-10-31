@@ -213,6 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 642261418}
   - component: {fileID: 642261417}
+  - component: {fileID: 642261419}
   m_Layer: 0
   m_Name: AsteroidSprite (1)
   m_TagString: Untagged
@@ -276,13 +277,30 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642261416}
-  m_LocalRotation: {x: -0, y: -0, z: 0.83181113, w: 0.5550587}
-  m_LocalPosition: {x: -1.08, y: 3.82, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.48, y: -3.53, z: 0}
+  m_LocalScale: {x: 0.576, y: 0.525, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 112.57001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &642261419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642261416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7e3b72e2a07d74694f5cfd6fb8bfc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketShip: {fileID: 1389817826}
+  asteroid1: {fileID: 1408353770}
+  asteroid2: {fileID: 642261416}
+  asteroid3: {fileID: 1146428459}
+  asteroid4: {fileID: 1908037538}
 --- !u!1 &788617739
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1146428461}
   - component: {fileID: 1146428460}
+  - component: {fileID: 1146428462}
   m_Layer: 0
   m_Name: AsteroidSprite (2)
   m_TagString: Untagged
@@ -436,13 +455,30 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146428459}
-  m_LocalRotation: {x: -0, y: -0, z: 0.25174117, w: 0.96779466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.59, y: 4.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 29.161001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1146428462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146428459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7e3b72e2a07d74694f5cfd6fb8bfc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketShip: {fileID: 1389817826}
+  asteroid1: {fileID: 1408353770}
+  asteroid2: {fileID: 642261416}
+  asteroid3: {fileID: 1146428459}
+  asteroid4: {fileID: 1908037538}
 --- !u!1 &1389817826
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +490,7 @@ GameObject:
   - component: {fileID: 1389817829}
   - component: {fileID: 1389817828}
   - component: {fileID: 1389817827}
+  - component: {fileID: 1389817830}
   m_Layer: 0
   m_Name: RocketSprite
   m_TagString: Untagged
@@ -474,6 +511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementspeed: 1
+  x: 0
+  y: 0
 --- !u!212 &1389817828
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -531,12 +570,24 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389817826}
   m_LocalRotation: {x: -0, y: -0, z: 0.0017054323, w: 0.9999986}
-  m_LocalPosition: {x: -0.21, y: 0.98, z: 0}
-  m_LocalScale: {x: 0.441235, y: 0.441235, z: 0.441235}
+  m_LocalPosition: {x: -1.496, y: 0.48, z: 0}
+  m_LocalScale: {x: 0.15149958, y: 0.33009395, z: 0.20473304}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.19500001}
+--- !u!114 &1389817830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389817826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746473f25c5418a49ace71a9fa7fdfdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1408353770
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1408353772}
   - component: {fileID: 1408353771}
+  - component: {fileID: 1408353773}
   m_Layer: 0
   m_Name: AsteroidSprite
   m_TagString: Untagged
@@ -611,12 +663,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408353770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.75, y: 3.88, z: 0}
+  m_LocalPosition: {x: 3.9, y: 4.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1408353773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408353770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7e3b72e2a07d74694f5cfd6fb8bfc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketShip: {fileID: 1389817826}
+  asteroid1: {fileID: 1408353770}
+  asteroid2: {fileID: 642261416}
+  asteroid3: {fileID: 1146428459}
+  asteroid4: {fileID: 1908037538}
 --- !u!1 &1771610462
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1908037540}
   - component: {fileID: 1908037539}
+  - component: {fileID: 1908037541}
   m_Layer: 0
   m_Name: AsteroidSprite (3)
   m_TagString: Untagged
@@ -770,10 +840,27 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908037538}
-  m_LocalRotation: {x: -0, y: -0, z: 0.77385217, w: -0.63336635}
-  m_LocalPosition: {x: 0.82, y: 4.68, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.79, y: -3.11, z: 0}
+  m_LocalScale: {x: 1.455, y: 1.2031, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -101.40201}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1908037541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908037538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7e3b72e2a07d74694f5cfd6fb8bfc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketShip: {fileID: 1389817826}
+  asteroid1: {fileID: 1408353770}
+  asteroid2: {fileID: 642261416}
+  asteroid3: {fileID: 1146428459}
+  asteroid4: {fileID: 1908037538}
