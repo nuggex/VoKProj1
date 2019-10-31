@@ -76,7 +76,5 @@ public class MoveRocket : MonoBehaviour
             transform.Translate(-h);
             //transform.position = transform.position + new Vector3(horizontalInput * movementspeed * Time.deltaTime, verticalInput * movementspeed * Time.deltaTime);
         }
-        am.SetPosition(transform.position.x, transform.position.y);
-
     }   
 }

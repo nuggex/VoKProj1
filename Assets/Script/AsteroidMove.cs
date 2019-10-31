@@ -4,29 +4,27 @@ using UnityEngine;
 
 public class AsteroidMove : MonoBehaviour
 {
-
+    
+    public GameObject rocketShip;
     float aspeed = 0.05f;
 
-    Vector2 rocketPosition;
-
-    public void SetPosition(float x, float y)
-    {
-        Vector2 rp = new Vector2(x,y);
-        rocketPosition = rp;
-
-    }
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-
     // Update is called once per frame
     void Update()
     {
+        float minDistance = 1.1f;
+        VArithmetics var = new VArithmetics();
+        float distance = var.GetDistance(transform.position, rocketShip.transform.position);
+        if (distance > minDistance)
+        {
+            transform.Translate(var.GetVelocity(rocketShip.transform.position, transform.position, aspeed));
+        }
 
-        Debug.Log(rocketPosition);
     }
 }
 

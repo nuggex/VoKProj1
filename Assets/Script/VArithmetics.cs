@@ -6,7 +6,7 @@ public class VArithmetics : MonoBehaviour
 {
 
 
-    float GetDistance(Vector2 v1, Vector2 v2)
+    public float GetDistance(Vector2 v1, Vector2 v2)
     {
         float x = v1.x - v2.x;
         float y = v1.y - v2.y;
@@ -48,8 +48,6 @@ public class VArithmetics : MonoBehaviour
     }
     void Update()
     {
-        float speed = 0.1f;
-        Vector2 v1 = new Vector2(-2.0f, 5.0f);
-        Vector2 v2 = new Vector2(-6.0f, 10.0f);
+
     }
 }
