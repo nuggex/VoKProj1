@@ -5,28 +5,28 @@ using UnityEngine;
 public class AsteroidMove : MonoBehaviour
 {
 
-    public class rocketPosition
-    {
-        public Vector2 pos;
+    float aspeed = 0.05f;
 
-        public rocketPosition(Vector2 p)
-        {
-            pos = p;
-        }
+    Vector2 rocketPosition;
+
+    public void SetPosition(float x, float y)
+    {
+        Vector2 rp = new Vector2(x,y);
+        rocketPosition = rp;
+
     }
-   
-        
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+
     // Update is called once per frame
     void Update()
     {
-        rocketPosition rp = new rocketPosition();
-        Debug.Log(rocketPosition.p.x);
+
+        Debug.Log(rocketPosition);
     }
 }
 

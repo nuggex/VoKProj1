@@ -7,8 +7,9 @@ public class MoveRocket : MonoBehaviour
     public float movementspeed = 1f;
     public float x;
     public float y;
-    
 
+    AsteroidMove am = new AsteroidMove();
+    
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +55,7 @@ public class MoveRocket : MonoBehaviour
         transform.Translate(v);
         */
 
+
         if (Input.GetKey("left"))
         {
             transform.Translate(-v/2);
@@ -74,7 +76,7 @@ public class MoveRocket : MonoBehaviour
             transform.Translate(-h);
             //transform.position = transform.position + new Vector3(horizontalInput * movementspeed * Time.deltaTime, verticalInput * movementspeed * Time.deltaTime);
         }
-        Vector2 rocketPosition = new Vector2(transform.position.x, transform.position.y);
+        am.SetPosition(transform.position.x, transform.position.y);
 
-    }
+    }   
 }
