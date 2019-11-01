@@ -8,7 +8,7 @@ public class MoveRocket : MonoBehaviour
     public float x;
     public float y;
 
-    AsteroidMove am = new AsteroidMove();
+
 
 
     // Start is called before the first frame update

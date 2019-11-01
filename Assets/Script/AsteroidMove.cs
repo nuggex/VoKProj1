@@ -24,11 +24,9 @@ public class AsteroidMove : MonoBehaviour
     void Update()
 
     {
-        
+        VArithmetics var = gameObject.AddComponent(typeof(VArithmetics)) as VArithmetics;
         rocketShip.transform.SetParent(newParent);
         float minDistance = 1.1f;   
-        float astDistance = 1.5f;
-        VArithmetics var = new VArithmetics();
         float distance = var.GetDistance(transform.position, rocketShip.transform.position);
         float distanceA12 = var.GetDistance(asteroid1.transform.position, asteroid2.transform.position);
         float distanceA13 = var.GetDistance(asteroid1.transform.position, asteroid3.transform.position);
@@ -45,10 +43,7 @@ public class AsteroidMove : MonoBehaviour
             }
             transform.Translate(var.GetVelocity(transform.position, asteroid1.transform.position, aspeed));
         }
-        Debug.Log("Distance12: " + distanceA12);
-        Debug.Log("Transform.position: " + transform.position);
-        Debug.Log("Trans.pos asteroid1: " + asteroid1.transform.position);
-        Debug.Log("Trans.pos asteroid2: " + asteroid2.transform.position);
+
         if (distanceA13 <= minDistance)
         {
             if (transform.position == asteroid3.transform.position)
