@@ -19,8 +19,8 @@ public class VArithmetics : MonoBehaviour
         return temp;
     }
 
-        
- 
+
+
     public Vector2 GetNormalized(Vector2 v)
     {
         float magnitude = Mathf.Sqrt(Mathf.Pow(v.x, 2) + Mathf.Pow(v.y, 2));
@@ -28,10 +28,9 @@ public class VArithmetics : MonoBehaviour
         return temp;
     }
 
-    
+
     public Vector2 GetVelocity(Vector2 v1, Vector2 v2, float speed)
     {
-        
         Vector2 direction;
         direction = GetDirection(v1, v2);
         Vector2 unitDirection;
@@ -43,7 +42,7 @@ public class VArithmetics : MonoBehaviour
     void Start()
     {
 
-      
+
 
     }
     void Update()

@@ -4,26 +4,27 @@ using UnityEngine;
 
 public class AsteroidMove : MonoBehaviour
 {
-    
+
     public GameObject rocketShip;
     public GameObject asteroid1;
     public GameObject asteroid2;
     public GameObject asteroid3;
-    public GameObject asteroid4; 
+    public GameObject asteroid4;
 
 
-    float aspeed = 0.05f;
+    float aspeed = 0.1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         float minDistance = 1.1f;
+        float astDistance = 1.5f;
         VArithmetics var = new VArithmetics();
         float distance = var.GetDistance(transform.position, rocketShip.transform.position);
         float distanceA12 = var.GetDistance(asteroid1.transform.position, asteroid2.transform.position);
@@ -35,43 +36,69 @@ public class AsteroidMove : MonoBehaviour
 
         if (distanceA12 <= minDistance)
         {
-          transform.Translate(var.GetVelocity(transform.position, asteroid2.transform.position, aspeed));
+            if (transform.position == asteroid1.transform.position)
+            {
+                return;
+            }
+            transform.Translate(var.GetVelocity(transform.position, asteroid1.transform.position, aspeed));
         }
-   
+        Debug.Log("Distance12: " + distanceA12);
+        Debug.Log("Transform.position: " + transform.position);
+        Debug.Log("Trans.pos asteroid1: " + asteroid1.transform.position);
+        Debug.Log("Trans.pos asteroid2: " + asteroid2.transform.position);
         if (distanceA13 <= minDistance)
         {
+            if (transform.position == asteroid3.transform.position)
+            {
+                return;
+            }
             transform.Translate(var.GetVelocity(transform.position, asteroid3.transform.position, aspeed));
         }
- 
+
         if (distanceA14 <= minDistance)
         {
+            if (transform.position == asteroid4.transform.position)
+            {
+                return;
+            }
             transform.Translate(var.GetVelocity(transform.position, asteroid4.transform.position, aspeed));
         }
 
         if (distanceA23 <= minDistance)
         {
+            if (transform.position == asteroid3.transform.position)
+            {
+                return;
+            }
             transform.Translate(var.GetVelocity(transform.position, asteroid3.transform.position, aspeed));
         }
 
         if (distanceA24 <= minDistance)
         {
+            if (transform.position == asteroid4.transform.position)
+            {
+                return;
+            }
             transform.Translate(var.GetVelocity(transform.position, asteroid4.transform.position, aspeed));
         }
-      
+
         if (distanceA34 <= minDistance)
         {
+            if (transform.position == asteroid4.transform.position)
+            {
+                return;
+            }
             transform.Translate(var.GetVelocity(transform.position, asteroid4.transform.position, aspeed));
         }
-        
+
         if (distance > minDistance)
         {
             transform.Translate(var.GetVelocity(rocketShip.transform.position, transform.position, aspeed));
         }
-        if(distance < minDistance)
+        if (distance < minDistance)
         {
             transform.Translate(var.GetVelocity(transform.position, rocketShip.transform.position, aspeed));
         }
 
     }
 }
-
