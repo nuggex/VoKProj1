@@ -7,7 +7,7 @@ public class MoveRocket : MonoBehaviour
     public float movementspeed = 1f;
     public float x;
     public float y;
-
+    public AudioSource audioData;
 
 
 
@@ -19,10 +19,9 @@ public class MoveRocket : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
-
+        audioData = GetComponent<AudioSource>();
         Vector2 v = new Vector2(0.1f, 0);
         // Vector2 h = new Vector2(0, 0.1f);
 
