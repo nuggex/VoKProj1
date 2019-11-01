@@ -55,47 +55,84 @@ public class MoveRocket : MonoBehaviour
         transform.Translate(v);
         */
 
-        
-        if (Input.GetKey(KeyCode.RightArrow) == true && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == false )
+        if (Input.GetKey(KeyCode.RightArrow) == false && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == false)
+        {
+            audioData.Stop();
+        }
+            if (Input.GetKey(KeyCode.RightArrow) == true && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == false )
         {
             transform.Translate(v);
             transform.rotation = Quaternion.Euler(0, 0, 0);
+            if (!audioData.isPlaying)
+            {
+                audioData.Play();
+            }
+            
+            
         }
         if (Input.GetKey(KeyCode.RightArrow) == false && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == true && Input.GetKey(KeyCode.DownArrow) == false)
         {
             transform.Translate(v);
             transform.rotation = Quaternion.Euler(0, 0, 90);
+            if (!audioData.isPlaying)
+            {
+                audioData.Play();
+            }
         }
       
         if (Input.GetKey(KeyCode.RightArrow) == false && Input.GetKey(KeyCode.LeftArrow) == true && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == false)
         {
             transform.Translate(v);
             transform.rotation = Quaternion.Euler(0, 0, 180);
+            if (!audioData.isPlaying)
+            {
+                audioData.Play();
+            }
         }
         if (Input.GetKey(KeyCode.RightArrow) == false && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == true)
         {
             transform.Translate(v);
             transform.rotation = Quaternion.Euler(0, 0, 270);
+            if (!audioData.isPlaying)
+            {
+                audioData.Play();
+            }
         }
         if (Input.GetKey(KeyCode.RightArrow) == true && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == true && Input.GetKey(KeyCode.DownArrow) == false)
         {
             transform.Translate(v);
             transform.rotation = Quaternion.Euler(0, 0, 45);
+            if (!audioData.isPlaying)
+            {
+                audioData.Play();
+            }
         }
         if (Input.GetKey(KeyCode.RightArrow) == false && Input.GetKey(KeyCode.LeftArrow) == true && Input.GetKey(KeyCode.UpArrow) == true && Input.GetKey(KeyCode.DownArrow) == false)
         {
             transform.Translate(v);
             transform.rotation = Quaternion.Euler(0, 0, 135);
+            if (!audioData.isPlaying)
+            {
+                audioData.Play();
+            }
         }
         if (Input.GetKey(KeyCode.RightArrow) == false && Input.GetKey(KeyCode.LeftArrow) == true && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == true)
         {
             transform.Translate(v);
             transform.rotation = Quaternion.Euler(0, 0, 225);
+            if (!audioData.isPlaying)
+            {
+                audioData.Play();
+            }
         }
         if (Input.GetKey(KeyCode.RightArrow) == true && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == true)
         {
             transform.Translate(v);
             transform.rotation = Quaternion.Euler(0, 0, 315);
+            if (!audioData.isPlaying)
+            {
+                audioData.Play();
+            }
         }
     }
 }
