@@ -21,6 +21,8 @@ public class MoveRocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         Vector2 v = new Vector2(0.1f, 0);
         // Vector2 h = new Vector2(0, 0.1f);
 
@@ -54,7 +56,7 @@ public class MoveRocket : MonoBehaviour
         transform.Translate(v);
         */
 
-
+        
         if (Input.GetKey(KeyCode.RightArrow) == true && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == false )
         {
             transform.Translate(v);

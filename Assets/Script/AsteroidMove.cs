@@ -10,7 +10,7 @@ public class AsteroidMove : MonoBehaviour
     public GameObject asteroid2;
     public GameObject asteroid3;
     public GameObject asteroid4;
-
+    Transform newParent;
 
     float aspeed = 0.1f;
 
@@ -22,8 +22,11 @@ public class AsteroidMove : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+
     {
-        float minDistance = 1.1f;
+        
+        rocketShip.transform.SetParent(newParent);
+        float minDistance = 1.1f;   
         float astDistance = 1.5f;
         VArithmetics var = new VArithmetics();
         float distance = var.GetDistance(transform.position, rocketShip.transform.position);
