@@ -55,28 +55,46 @@ public class MoveRocket : MonoBehaviour
         */
 
 
-        if (Input.GetKey(KeyCode.RightArrow) == true)
+        if (Input.GetKey(KeyCode.RightArrow) == true && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == false )
         {
             transform.Translate(v);
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
-
-
-        if (Input.GetKey(KeyCode.UpArrow) == true)
+        if (Input.GetKey(KeyCode.RightArrow) == false && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == true && Input.GetKey(KeyCode.DownArrow) == false)
         {
             transform.Translate(v);
             transform.rotation = Quaternion.Euler(0, 0, 90);
         }
-
-        if (Input.GetKey(KeyCode.LeftArrow) == true)
+      
+        if (Input.GetKey(KeyCode.RightArrow) == false && Input.GetKey(KeyCode.LeftArrow) == true && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == false)
         {
             transform.Translate(v);
             transform.rotation = Quaternion.Euler(0, 0, 180);
         }
-        if (Input.GetKey(KeyCode.DownArrow) == true)
+        if (Input.GetKey(KeyCode.RightArrow) == false && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == true)
         {
             transform.Translate(v);
             transform.rotation = Quaternion.Euler(0, 0, 270);
+        }
+        if (Input.GetKey(KeyCode.RightArrow) == true && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == true && Input.GetKey(KeyCode.DownArrow) == false)
+        {
+            transform.Translate(v);
+            transform.rotation = Quaternion.Euler(0, 0, 45);
+        }
+        if (Input.GetKey(KeyCode.RightArrow) == false && Input.GetKey(KeyCode.LeftArrow) == true && Input.GetKey(KeyCode.UpArrow) == true && Input.GetKey(KeyCode.DownArrow) == false)
+        {
+            transform.Translate(v);
+            transform.rotation = Quaternion.Euler(0, 0, 135);
+        }
+        if (Input.GetKey(KeyCode.RightArrow) == false && Input.GetKey(KeyCode.LeftArrow) == true && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == true)
+        {
+            transform.Translate(v);
+            transform.rotation = Quaternion.Euler(0, 0, 225);
+        }
+        if (Input.GetKey(KeyCode.RightArrow) == true && Input.GetKey(KeyCode.LeftArrow) == false && Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == true)
+        {
+            transform.Translate(v);
+            transform.rotation = Quaternion.Euler(0, 0, 315);
         }
     }
 }
