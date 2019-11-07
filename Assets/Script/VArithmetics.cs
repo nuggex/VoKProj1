@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VArithmetics : MonoBehaviour
+public class VArithmetics
 {
 
 
-    public float GetDistance(Vector2 v1, Vector2 v2)
+    public static float GetDistance(Vector2 v1, Vector2 v2)
     {
         float x = v1.x - v2.x;
         float y = v1.y - v2.y;
-        return (Mathf.Sqrt(Mathf.Pow(x, 2) + Mathf.Pow(y, 2)));
+        Vector2 D = v2 - v1;
+        return (Mathf.Sqrt(Mathf.Pow(D.x, 2) + Mathf.Pow(D.y, 2)));
     }
-    public Vector2 GetDirection(Vector2 v1, Vector2 v2)
+    public static Vector2 GetDirection(Vector2 v1, Vector2 v2)
     {
 
         Vector2 temp = new Vector2(v1.x - v2.x, v1.y - v2.y);
@@ -21,7 +22,7 @@ public class VArithmetics : MonoBehaviour
 
 
 
-    public Vector2 GetNormalized(Vector2 v)
+    public static Vector2 GetNormalized(Vector2 v)
     {
         float magnitude = Mathf.Sqrt(Mathf.Pow(v.x, 2) + Mathf.Pow(v.y, 2));
         Vector2 temp = new Vector2(v.x / magnitude, v.y / magnitude);
@@ -29,7 +30,7 @@ public class VArithmetics : MonoBehaviour
     }
 
 
-    public Vector2 GetVelocity(Vector2 v1, Vector2 v2, float speed)
+    public static Vector2 GetVelocity(Vector2 v1, Vector2 v2, float speed)
     {
         Vector2 direction;
         direction = GetDirection(v1, v2);
@@ -39,14 +40,4 @@ public class VArithmetics : MonoBehaviour
         return Velo;
     }
 
-    void Start()
-    {
-
-
-
-    }
-    void Update()
-    {
-
-    }
 }

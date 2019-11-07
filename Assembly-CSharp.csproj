@@ -56,7 +56,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\AsteroidMove.cs" />
-     <Compile Include="Assets\Script\MoveRocket.cs" />
+     <Compile Include="Assets\Script\RocketMove.cs" />
+     <Compile Include="Assets\Script\TargetFPS.cs" />
      <Compile Include="Assets\Script\VArithmetics.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/nugge/GitHub/VoKProj1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
