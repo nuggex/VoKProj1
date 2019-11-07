@@ -19,10 +19,8 @@ public class RocketMove : MonoBehaviour
     {
         // hastighet för svängning deklareras här // 
         float rotspeed = speedare * Time.fixedDeltaTime;
-
         // Vector för att flytta på skeppet i riktning av det // 
         Vector2 v = new Vector2(movementspeed, 0);
-
         // Accelerera skeppet mot max hastighet // 
         if (Input.GetKey(KeyCode.DownArrow) == false && Input.GetKey(KeyCode.UpArrow) == true)
         {
@@ -35,7 +33,6 @@ public class RocketMove : MonoBehaviour
                 forward.Play();
             }
         }
-
         // Accellerera skeppet mot max hastighet bakåt // 
         if (Input.GetKey(KeyCode.DownArrow) == true && Input.GetKey(KeyCode.UpArrow) == false)
         {
@@ -48,23 +45,21 @@ public class RocketMove : MonoBehaviour
                 reverse.Play();
             }
         }
-
         // Deaccelerar skäppet mot noll ifall varken upp eller ner hålls tryckt hålls uppe. // 
         if (Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == false)
         {
             /*  audioData.Stop();*/
             if (movementspeed >= 0.01f)
             {
-                movementspeed = movementspeed - 0.01f;
+                movementspeed = movementspeed - 0.005f;
                 transform.Translate(v);
             }
             if (movementspeed <= -0.01f)
             {
-                movementspeed = movementspeed + 0.01f;
+                movementspeed = movementspeed + 0.005f;
                 transform.Translate(v);
             }
         }
-
         // rotera skäppet till höger runt skäppets Z axel  // 
         if (Input.GetKey(KeyCode.RightArrow) == true && Input.GetKey(KeyCode.LeftArrow) == false)
         {
@@ -75,24 +70,20 @@ public class RocketMove : MonoBehaviour
         {
             transform.Rotate(0, 0, rotspeed, Space.Self);
         }
-
         // Flytta skeppet frammåt i dess Z riktning // 
         if (Input.GetKey(KeyCode.UpArrow) == true && Input.GetKey(KeyCode.DownArrow) == false)
         {
             transform.Translate(v);
         }
-
         // Flytta skeppet backåt i förhållande till dess Z riktning // 
         if (Input.GetKey(KeyCode.UpArrow) == false && Input.GetKey(KeyCode.DownArrow) == true)
         {
             transform.Translate(v * reversespeed);
         }
-
-        // Refleketera skeppet i inversa vinkeln från Sidoväggarna ( X Gränserna) // 
+        // Refleketera skeppet i inversa vinkeln på X axelns gränser // 
         if (transform.position.x >= 9 || transform.position.x <= -9)
         {
             z = transform.eulerAngles.z;
-            Debug.Log("LocalRoto Z : " + z);
             if (z < 0)
             {
                 z = -180 - z;
@@ -103,7 +94,7 @@ public class RocketMove : MonoBehaviour
             }
             transform.localRotation = Quaternion.Euler(0, 0, z);
         }
-        // Reflektera skäppet i inversa vinkeln från taket och bottnet // 
+        // Reflektera skäppet i inversa vinkeln på Y Axelns gränser // 
         if (transform.position.y >= 5f || transform.position.y <= -5f)
         {
             transform.rotation = Quaternion.Inverse(transform.rotation);
