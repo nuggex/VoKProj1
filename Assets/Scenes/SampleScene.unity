@@ -741,19 +741,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5b17a716bab724f8fcf9e8ebc061a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 0
-  y: 0
   speedare: 360
-  turnangle: 0
-  turnrate: 0
-  angle: 0
   reversespeed: 0.7
   movementspeed: 0
-  rotobool: 1
-  oldangle: 0
+  z: 0
   forward: {fileID: 1360977498}
   reverse: {fileID: 1326053840}
-  turner: 0
 --- !u!212 &1389817828
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -810,13 +803,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389817826}
-  m_LocalRotation: {x: -0, y: -0, z: 0.0017054323, w: 0.9999986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.01, y: 0.02, z: 0}
   m_LocalScale: {x: 0.15149958, y: 0.33009395, z: 0.20473304}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.19500001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1408353770
 GameObject:
   m_ObjectHideFlags: 0
