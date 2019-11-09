@@ -6,10 +6,9 @@ public class VArithmetics
 {
 
 
+
     public static float GetDistance(Vector2 v1, Vector2 v2)
     {
-        float x = v1.x - v2.x;
-        float y = v1.y - v2.y;
         Vector2 D = v2 - v1;
         return (Mathf.Sqrt(Mathf.Pow(D.x, 2) + Mathf.Pow(D.y, 2)));
     }
