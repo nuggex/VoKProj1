@@ -13,6 +13,8 @@ public class Asteroid : MonoBehaviour
     public GameObject asteroid1;
     public GameObject asteroid2;
     public GameObject asteroid3;
+    public AudioSource hit;
+    public AudioSource asteroidhit;
     Vector2 rocketTemp;
     Counters ast1 = new Counters();
     Counters ast2 = new Counters();
@@ -44,6 +46,8 @@ public class Asteroid : MonoBehaviour
         {
             ast.counter++;
             rocketTemp = rocket.transform.position;
+            hit.Play();
+            
         }
         if (ast.counter != 0 && ast.counter < 30)
         {
