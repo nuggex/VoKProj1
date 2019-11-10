@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Counters
 {
-    public int counter { get; set; }
-    public int collision { get; set; }
 
-    public int xLeft { get; set; }
-    public int xRight { get; set; }
-    public int yTop { get; set; }
-    public int yLow { get; set; }
+
+    public bool yOutOfBounds { get; set; }
+    public bool xOutOfBounds { get; set; }
+    public bool collisionBool { get; set; }
+    public Vector2 objectTemp { get; set; }
+    public Vector2 collisionTemp { get; set; }
+    public Vector2 previousFrame { get; set; }
+    public int counter { get; set; }
+
 
 }

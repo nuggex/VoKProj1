@@ -29,14 +29,18 @@ public class VArithmetics
     }
 
 
-    public static Vector2 GetVelocity(Vector2 v1, Vector2 v2, float speed)
+    public static Vector2 GetVelocity(Vector2 v1, Vector2 v2, float speed, Counters ast)
     {
+        float speedier = speed * 1.5f;
+        Vector2 velo;
         Vector2 direction;
         direction = GetDirection(v1, v2);
         Vector2 unitDirection;
         unitDirection = GetNormalized(direction);
-        Vector2 Velo = new Vector2(unitDirection.x * speed, unitDirection.y * speed);
-        return Velo;
+        if (ast.collisionBool) velo = new Vector2(unitDirection.x * (speedier), unitDirection.y * (speedier)); //attempt to make asteroids bounce more
+        else velo = new Vector2(unitDirection.x * speed, unitDirection.y * speed);
+        return velo;
     }
+
 
 }
