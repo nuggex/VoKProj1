@@ -12,7 +12,6 @@ public class RocketMove : MonoBehaviour
     public AudioSource reverse;
     void Start()
     {
-        reversespeed = 0.7f;
         speedare = 360f;
     }
     void FixedUpdate()
@@ -24,7 +23,7 @@ public class RocketMove : MonoBehaviour
         // Accelerera skeppet mot max hastighet // 
         if (Input.GetKey(KeyCode.DownArrow) == false && Input.GetKey(KeyCode.UpArrow) == true)
         {
-            if (movementspeed < 0.15f)
+            if (movementspeed < 0.25f)
             {
                 movementspeed = movementspeed + 0.01f;
             }
@@ -36,7 +35,7 @@ public class RocketMove : MonoBehaviour
         // Accellerera skeppet mot max hastighet bakåt // 
         if (Input.GetKey(KeyCode.DownArrow) == true && Input.GetKey(KeyCode.UpArrow) == false)
         {
-            if (movementspeed > -0.10f)
+            if (movementspeed > -0.12f)
             {
                 movementspeed = movementspeed - 0.01f;
             }

@@ -37,8 +37,9 @@ public class VArithmetics
         direction = GetDirection(v1, v2);
         Vector2 unitDirection;
         unitDirection = GetNormalized(direction);
-        if (ast.collisionBool) velo = new Vector2(unitDirection.x * (speedier), unitDirection.y * (speedier)); //attempt to make asteroids bounce more
-        else velo = new Vector2(unitDirection.x * speed, unitDirection.y * speed);
+        //if (ast.collisionBool)  velo = new Vector2(unitDirection.x * (speedier), unitDirection.y * (speedier)); //attempt to make asteroids bounce more
+        //else 
+        velo = new Vector2(unitDirection.x * speed, unitDirection.y * speed);
         return velo;
     }
 
